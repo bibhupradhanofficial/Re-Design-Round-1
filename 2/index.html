@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collectibles UI Replicated</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Collectibles</h1>
+
+    <div class="view-switcher">
+      <div class="active-pill"></div>
+      <button id="list-view-btn" class="view-btn active" onclick="switchView('list')">
+        <i class="ph-bold ph-list-numbers"></i> List view
+      </button>
+      <button id="card-view-btn" class="view-btn" onclick="switchView('card')">
+        <i class="ph-bold ph-squares-four"></i> Card view
+      </button>
+      <button id="pack-view-btn" class="view-btn" onclick="switchView('pack')">
+        <i class="ph-bold ph-swatches"></i> Pack view
+      </button>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content-area">
+      <!-- List View -->
+      <div id="list-view-content" class="view-content active">
+        <div class="list-item">
+          <div style="display: flex; align-items: center;">
+            <img src="./shared-layout-asset-1.png" alt="Skilled Fingers Series">
+            <div class="list-item-info">
+              <div class="list-item-title">Skilled Fingers Series</div>
+              <div class="list-item-price">0.855 <span>ETH</span></div>
+            </div>
+          </div>
+          <div class="list-item-hash">
+            <span class="diamond-icon"></span> #209
+          </div>
+        </div>
+
+        <div class="list-item">
+          <div style="display: flex; align-items: center;">
+            <img src="./shared-layout-asset-2.png" alt="Vibrant Vibes Series">
+            <div class="list-item-info">
+              <div class="list-item-title">Vibrant Vibes Series</div>
+              <div class="list-item-price">0.209 <span>ETH</span></div>
+            </div>
+          </div>
+          <div class="list-item-hash">
+            <span class="diamond-icon"></span> #808
+          </div>
+        </div>
+      </div>
+
+      <!-- Card View -->
+      <div id="card-view-content" class="view-content">
+        <div class="card-grid">
+          <div class="card-item">
+            <div class="card-image-wrapper">
+              <img src="./shared-layout-asset-1.png" alt="Skilled Fingers Series">
+            </div>
+            <div class="card-item-title">Skilled Fingers Series</div>
+            <div class="card-footer">
+              <div class="card-price">0.855 <span>ETH</span></div>
+              <div class="card-hash"><span class="diamond-icon"></span> #209</div>
+            </div>
+          </div>
+
+          <div class="card-item">
+            <div class="card-image-wrapper">
+              <img src="./shared-layout-asset-2.png" alt="Vibrant Vibes Series">
+            </div>
+            <div class="card-item-title">Vibrant Vibes Series</div>
+            <div class="card-footer">
+              <div class="card-price">0.209 <span>ETH</span></div>
+              <div class="card-hash"><span class="diamond-icon"></span> #808</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pack View -->
+      <div id="pack-view-content" class="view-content">
+        <div class="pack-container">
+          <div class="pack-stack">
+            <div class="pack-card"></div>
+            <div class="pack-card"></div>
+            <div class="pack-card">
+              <img src="./shared-layout-asset-2.png" alt="Top of Pack">
+            </div>
+          </div>
+          <div class="pack-info">
+            <div class="pack-title">2 Collectibles</div>
+            <div class="pack-total-price">1.064 <span>ETH</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
